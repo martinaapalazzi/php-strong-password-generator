@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     require __DIR__. '/functions.php';
 ?>
 
@@ -13,7 +15,22 @@
 
     <div>
         <form action="index.php" method="GET">
-            <?php echo randomPassword() ?>
+            <input type="number" name="length" id="length">
+            <br>
+            <button type="submit">
+                Genera
+            </button>
+            <br>
+            <?php
+                print_r($_GET);
+                if(isset($_GET['length']) && !empty($_GET['length'])) {
+                    $password = randomPassword($_GET['length']);
+
+                    $_SESSION['password'] = $password;
+
+                    header("location: /password.php");
+                }
+            ?>
         </form>
     </div>
     
