@@ -15,10 +15,16 @@
 
     <div>
         <form action="index.php" method="GET">
-            <input type="number" name="length" id="length">
+            <label for="">
+                Choose how long you want your password:
+            </label>
+            <div>
+            <br>
+            <input type="number" name="length" id="length" placeholder="Type a number">
+            </div>
             <br>
             <button type="submit">
-                Genera
+                Generate
             </button>
             <br>
             <?php

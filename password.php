@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['password'])) {
     echo $_SESSION['password'];
 } else {
-    echo "Errore password non generata. Torna a index.php";
+    echo "Error, password not generated. Go back to index.php";
 }
 
 // $_GET -> https://url?parm1=val1&param2=val2 -> [ 'param1' => 'val1', 'param2' => 'val2']
