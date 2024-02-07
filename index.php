@@ -28,7 +28,7 @@
 
                     $_SESSION['password'] = $password;
 
-                    header("location: /password.php");
+                    header('location: /password.php');
                 }
             ?>
         </form>
