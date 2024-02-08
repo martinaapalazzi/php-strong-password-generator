@@ -14,7 +14,7 @@
 <body>
 
     <div>
-        <form action="index.php" method="GET">
+        <form action="password.php" method="GET">
             <label for="">
                 Choose how long you want your password:
             </label>
@@ -28,7 +28,7 @@
             </button>
             <br>
             <?php
-                print_r($_GET);
+                // print_r($_GET);
                 if(isset($_GET['length']) && !empty($_GET['length'])) {
                     $password = randomPassword($_GET['length']);
 
